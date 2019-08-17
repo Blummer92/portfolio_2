@@ -3,19 +3,14 @@ import Button from "react-bootstrap/Button";
 import Jumbotron from "react-bootstrap/Jumbotron";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Form from "../src/Form";
 
 export default class Body extends React.Component {
   render() {
     return (
       <div>
         <Jumbotron>
-          <h1>Hello, world!</h1>
-          <p>
-            This is a template for a simple marketing or informational website.
-            It includes a large callout called a jumbotron and three supporting
-            pieces of content. Use it as a starting point to create something
-            more unique.
-          </p>
+          <Form />
         </Jumbotron>
         <Row>
           <Col md={4}>
