@@ -1,22 +1,23 @@
-import React from "react";
+import React, {useState} from "react"; //this is a stateless. useState can only be used with stateless react component  https://reactjs.org/docs/hooks-state.html
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 
-function FormExample() {
-  const [validated, setValidated] = useState(false);
+
+const SignUpForm = ()=>{
+
+  const [validated, setValidated] = useState(false); 
 
   const handleSubmit = event => {
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
       event.preventDefault();
-      event.stopPropagation();
+      event.stopPropagation(); 
     }
 
     setValidated(true);
   };
-
   return (
     <Form noValidate validated={validated} onSubmit={handleSubmit}>
       <Form.Row>
@@ -92,3 +93,6 @@ function FormExample() {
     </Form>
   );
 }
+
+
+export default SignUpForm;

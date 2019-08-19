@@ -5,28 +5,41 @@ import Jumbotron from "react-bootstrap/Jumbotron";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import HeaderNavigation from "../src/HeaderNavigation";
-import Form from "../src/Form";
-import Body from "../src/Body";
+import Body from "../src/Body"; //what is wrong with my body ell
 import Popup from "../src/Popup";
 
+
+
+    
+/*class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      showPopup: false
+    };
+  }
+  togglePopup() {
+    this.setState({
+      showPopup: !this.state.showPopup
+    });
+  }*/
+  
 const App = () => (
   <div>
-    <div>
+    {/* <div>
       {this.state.showPopup ? (
         <Popup
           text='Click "Close Button" to hide popup'
           closePopup={this.togglePopup.bind(this)}
         />
       ) : null}
-    </div>
+    </div>*/}
     <HeaderNavigation />
     <Jumbotron fluid>
-      <button onClick={this.togglePopup.bind(this)}> Signnup</button>
-      <h1 className="header">Welcome To React-Bootstrap</h1>
+       {/*  <button onClick={this.togglePopup.bind(this)}> Signnup</button>
+      <h1 className="header">Welcome To React-Bootstrap</h1>*/}
     </Jumbotron>
-    <Body>
-      <Form />
-    </Body>
+    <Body />
   </div>
 );
 
