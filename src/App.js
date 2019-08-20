@@ -6,24 +6,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import HeaderNavigation from "../src/HeaderNavigation";
 import Body from "../src/Body"; //what is wrong with my body ell
-import Popup from "../src/Popup";
 
 
+class App extends React.Component {
 
     
-/*class App extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      showPopup: false
-    };
-  }
-  togglePopup() {
-    this.setState({
-      showPopup: !this.state.showPopup
-    });
-  }*/
-  
+  render(){ // add return statement to this.
 const App = () => (
   <div>
     {/* <div>
@@ -36,11 +24,17 @@ const App = () => (
     </div>*/}
     <HeaderNavigation />
     <Jumbotron fluid>
+            <div>
+      </div>
+    {/*); is this unneded bc it seems like it is causing the error*/}
        {/*  <button onClick={this.togglePopup.bind(this)}> Signnup</button>
       <h1 className="header">Welcome To React-Bootstrap</h1>*/}
     </Jumbotron>
-    <Body />
+    <Body />, 
   </div>
-);
+  );
+    return App
+  };
 
-export default App;
+} // you forgot this line
+export default App; 
